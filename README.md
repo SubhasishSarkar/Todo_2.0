@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-# [Documentation](https://github.com/SubhasishSarkar/Todo_2.0/blob/master/DCUMENTATION.md)
+# [Documentation](https://github.com/SubhasishSarkar/Todo_2.0/blob/master/DOCUMENTATION.md)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
