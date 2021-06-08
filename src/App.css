@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.App h2{
+  margin:  0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo_container{
+  height: 100vh;
+  background-color: #8a2fd0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:  0 15px;
+}
+.todo_wrapper{
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  width: 500px;
+}
+.button_container{
+  display: flex;
+  justify-content: flex-end;
+}
+.button_container > button{
+  border: none;
+  padding: 7px 10px;
+  border-radius: 13px;
+  color: #6bbd58;
+  background-color: #e2f1df;
+  cursor: pointer;
+  margin-left: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.input_conatiner{
+  padding: 10px 0;
+}
+.input_conatiner > input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #d3d3d3;
+  width: 100%;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+.tasks_wrapper{
+  height: 300px;
+  overflow-y:  scroll;
+  padding: 10px 2px;
+}
+.task_item_container{
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 15%);
+  -webkit-box-shadow: 0 2px 12px 0 rgb(0 0 0 / 15%);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.task_item_container:hover, .button_container > button:hover{
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0 2px 12px 0 rgb(0 0 0 / 30%);
+  transition: linear .3s;
+}
+.task_item_container > div{
+  display: flex;
+  align-items: center;
+}
+.keyword_container{
+  border-bottom: 1px solid lightgrey;
+  padding: 5px 0;
+}
+.keyword_container > button{
+  margin-right: 5px;
+}
+.keyword{
+  color: #8a2fd0;
+  border: none;
+  cursor: pointer;
+  background-color: #ddcee8;
+  border-radius: 6px;
+}
+.circle_grey{
+  width: 10px;
+  height: 10px;
+  border: 1px solid darkgrey;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  margin: 5px;
+}
+.circle_green{
+  width: 10px;
+  height: 10px;
+  border: 1px solid #6bbd58;
+  border-radius: 50%;
+  background-color: #6bbd58;
+  margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tasks_wrapper::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.tasks_wrapper{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
