@@ -5,7 +5,7 @@ export default function Task(props) {
   const handleClick = (e) => {
     e.stopPropagation();
     if (e.target.className === "keyword") {
-      console.log(e.target.dataset.key);
+      //console.log(e.target.dataset.key);
       props.onKeySearch(e.target.dataset.key);
     } else if(props.onComplete) {
 
