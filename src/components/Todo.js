@@ -19,7 +19,7 @@ export default class Todo extends Component {
   componentDidMount(){
     //console.log('Mount')
     const appData = this.getLocalData();
-    if(appData.tasks.length > 0)
+    if(appData && appData.tasks.length > 0)
       this.setState({...this.state,...appData});
   }
   componentDidUpdate(){
